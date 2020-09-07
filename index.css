@@ -7,13 +7,15 @@
 }
 
 #logo {
-  height: 150px;
-  width: 150px;
+  height: 100px;
+  width: 100px;
   border-radius: 15%;
+  margin: 10px;
 }
 
 body {
   background: linear-gradient(#fec015, #f56cc0, #ae6fff);
+  height: 100vh;
 }
 
 .score {
@@ -27,23 +29,23 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  padding: 40px;
+  padding: 30px;
   font-size: 30px;
-  animation: tracking-in-contract-bck 1s cubic-bezier(0.215, 0.61, 0.355, 1)
+  animation: tracking-in-expand-fwd-top 2s cubic-bezier(0.215, 0.61, 0.355, 1)
     infinite;
 }
 
-@keyframes tracking-in-contract-bck {
+@keyframes tracking-in-expand-fwd-top {
   0% {
-    letter-spacing: 1em;
-    transform: translateZ(400px);
+    letter-spacing: -0.5em;
+    transform: translateZ(-700px) translateY(-500px);
     opacity: 0;
   }
   40% {
     opacity: 0.6;
   }
   100% {
-    transform: translateZ(0);
+    transform: translateZ(0) translateY(0);
     opacity: 1;
   }
 }
@@ -89,6 +91,7 @@ body {
 .hands {
   display: flex;
   justify-content: center;
+  padding-bottom: 10px;
 }
 
 #a {
