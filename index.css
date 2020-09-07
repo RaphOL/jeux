@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Heebo", sans-serif;
+}
+
+.score {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 80px;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+#rock {
+  width: 150px;
+  height: 50px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 25px;
+  background-color: #fec015;
+}
+
+#paper {
+  width: 150px;
+  height: 50px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 25px;
+  background-color: #ae6fff;
+}
+
+#scissors {
+  width: 150px;
+  height: 50px;
+  border: none;
+  color: white;
+  font-size: 20px;
+  border-radius: 25px;
+  background-color: #f56cc0;
+}
