@@ -45,19 +45,19 @@ function setResult(player, robot) {
     let result = "";
     if (player === robot) {
         result = "Equality!";
-        // equality.play();
+        equality.play();
         end(result);
     } else if ((player === "Rock" && robot === "Scissors") || (player === "Paper" && robot === "Rock") || (player === "Scissors" && robot === "Paper")) {
         result = "You Win!";
         scorePlayer++;
         updateScore();
-        // win.play();
+        win.play();
         end(result);
     } else {
         result = "You Loooooose!";
         scoreComputer++;
         updateScore();
-        // lose.play();
+        lose.play();
         end(result);
     }
 
