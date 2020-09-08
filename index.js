@@ -5,12 +5,10 @@ const lose = document.getElementById("lose");
 const robot = buttons[Math.floor(Math.random() * buttons.length)].innerHTML;
 const imagePlayer = document.getElementById("a");
 const imageRobot = document.getElementById("b");
+let scorePlayer = 0;
+let scoreComputer = 0;
 
 window.onload = setButton();
-//logique de deuxième manche
-//lancerDeuxiemeManche() {
-//    setButton();
-//}
 
 function setButton() {
     for (let i = 0; i < buttons.length; i++) {
@@ -48,14 +46,39 @@ function setResult(player, robot) {
     if (player === robot) {
         result = "Equality";
         // equality.play();
+        end(result);
     } else if ((player === "Rock" && robot === "Scissors") || (player === "Paper" && robot === "Rock") || (player === "Scissors" && robot === "Paper")) {
         result = "You Win!";
+        scorePlayer++;
+        updateScore();
         // win.play();
+        end(result);
     } else {
         result = "You Loooooose!";
+        scoreComputer++;
+        updateScore();
         // lose.play();
+        end(result);
     }
 
     document.querySelector("#resultContainer").innerHTML =
         `<div class="result">${result}</div>`;
+}
+
+function updateScore() {
+    let scoreP = document.getElementById("sPlayer");
+    let scoreC = document.getElementById("sComputer");
+    scoreP.textContent = scorePlayer;
+    scoreC.textContent = scoreComputer;
+}
+
+function end(result) {
+    if ((scorePlayer === 3) || (scoreComputer === 3)) {
+        const endT = document.getElementById("endText");
+        endT.style.visibility = "visible";
+        endT.innerHTML = `${result} END OF THE GAME`;
+        setTimeout(() => {
+            location.reload()
+        }, 3000);
+    }
 }

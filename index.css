@@ -111,3 +111,20 @@ body {
   width: 200px;
   padding-left: 60px;
 }
+
+#endText {
+  visibility: hidden;
+  background-color: #f56cc0;
+  display: flex;
+  position: fixed;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.9;
+  font-size: 3rem;
+  flex-direction: column;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
