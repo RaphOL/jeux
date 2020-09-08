@@ -31,8 +31,8 @@ body {
   flex-direction: row;
   padding: 30px;
   font-size: 30px;
-  animation: tracking-in-expand-fwd-top 2s cubic-bezier(0.215, 0.61, 0.355, 1)
-    infinite;
+  animation: tracking-in-expand-fwd-top 1s cubic-bezier(0.215, 0.61, 0.355, 1);
+  animation-iteration-count: 1;
 }
 
 @keyframes tracking-in-expand-fwd-top {
@@ -66,6 +66,8 @@ body {
   border-radius: 25px;
   background-color: #fec015;
   margin: 20px;
+  outline: none;
+  cursor: pointer;
 }
 
 #paper {
@@ -76,6 +78,8 @@ body {
   border-radius: 25px;
   background-color: #ae6fff;
   margin: 20px;
+  outline: none;
+  cursor: pointer;
 }
 
 #scissors {
@@ -86,6 +90,8 @@ body {
   border-radius: 25px;
   background-color: #f56cc0;
   margin: 20px;
+  outline: none;
+  cursor: pointer;
 }
 
 .hands {
