@@ -6,6 +6,29 @@
   color: white;
 }
 
+#start {
+  position: absolute;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ae6fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#startButton {
+  width: 150px;
+  height: 50px;
+  border: none;
+  font-size: 20px;
+  border-radius: 25px;
+  background-color: #f56cc0;
+  margin: 20px;
+  outline: none;
+  cursor: pointer;
+}
+
 #logo {
   height: 100px;
   width: 100px;
@@ -16,12 +39,18 @@
 body {
   background: linear-gradient(#fec015, #f56cc0, #ae6fff);
   height: 100vh;
+  position: relative;
 }
 
 .score {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+}
+
+p {
+  text-align: center;
+  font-size: 20px;
 }
 
 .result {
@@ -120,6 +149,7 @@ body {
   color: white;
   justify-content: center;
   align-items: center;
+  text-align: center;
   opacity: 0.9;
   font-size: 3rem;
   flex-direction: column;

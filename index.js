@@ -1,4 +1,4 @@
-const buttons = document.querySelectorAll("button");
+const buttons = document.getElementsByClassName("buttons");
 const equality = document.getElementById("equality");
 const win = document.getElementById("win");
 const lose = document.getElementById("lose");
@@ -44,7 +44,7 @@ function setImageRobot(robot, imageRobot) {
 function setResult(player, robot) {
     let result = "";
     if (player === robot) {
-        result = "Equality";
+        result = "Equality!";
         // equality.play();
         end(result);
     } else if ((player === "Rock" && robot === "Scissors") || (player === "Paper" && robot === "Rock") || (player === "Scissors" && robot === "Paper")) {
@@ -76,9 +76,18 @@ function end(result) {
     if ((scorePlayer === 3) || (scoreComputer === 3)) {
         const endT = document.getElementById("endText");
         endT.style.visibility = "visible";
-        endT.innerHTML = `${result} END OF THE GAME`;
+        endT.innerHTML = `${result} </br> End of the game`;
         setTimeout(() => {
             location.reload()
         }, 3000);
     }
 }
+
+function start() {
+    const start = document.getElementById("start");
+    start.addEventListener("click", function () {
+        start.style.visibility = "hidden";
+    });
+}
+
+start();
