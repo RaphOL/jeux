@@ -1,4 +1,7 @@
 const buttons = document.querySelectorAll("button");
+const equality = document.getElementById("equality");
+const win = document.getElementById("win");
+const lose = document.getElementById("lose");
 
 for (let i = 0; i < buttons.length; i++) {
     buttons[i].addEventListener("click", function () {
@@ -28,10 +31,13 @@ for (let i = 0; i < buttons.length; i++) {
         let result = "";
         if (player === robot) {
             result = "Equality";
+            equality.play();
         } else if ((player === "Rock" && robot === "Scissors") || (player === "Paper" && robot === "Rock") || (player === "Scissors" && robot === "Paper")) {
             result = "You Win!";
+            win.play();
         } else {
             result = "You Loooooose!";
+            lose.play();
         }
 
         document.querySelector(".result").innerHTML =
