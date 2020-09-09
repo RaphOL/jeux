@@ -83,11 +83,25 @@ function end(result) {
     }
 }
 
+
+// 1 cibler inputElement
+// 2 ecouter event oninput sur inputElement
+// 3 lire valeur inputElement dans le event handler
+// 4 modifier player name dans le html
+
 function start() {
-    const start = document.getElementById("start");
-    start.addEventListener("click", function () {
-        start.style.visibility = "hidden";
+    const startBtn = document.getElementById("startButton");
+    const divStart = document.getElementById("start");
+    const inputField = document.getElementById("name");
+
+    startBtn.addEventListener("click", function clickHandler() {
+        divStart.style.visibility = "hidden";
     });
+    inputField.oninput = function recupValue(event) {
+        console.log(event.target.value);
+        document.querySelector("#playerName").innerHTML = event.target.value;
+    };
 }
+
 
 start();
