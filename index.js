@@ -1,3 +1,13 @@
+// je n'ai plus de bouton 
+// définir à quoi correspondent les touches 
+// lier les touches au player 1 et PLayer 2
+// les conditions
+// résultats
+
+// window.onkeyup = (evt) => {
+//     if (evt.keyCode === 37) {
+//         success(stealYourEnnemy);
+
 const buttons = document.getElementsByClassName("buttons");
 const equality = document.getElementById("equality");
 const win = document.getElementById("win");
@@ -23,21 +33,21 @@ function setButton() {
 
 function setImagePlayer(player, imagePlayer) {
     if (player === "Rock") {
-        imagePlayer.setAttribute("src", "./rock.png");
+        imagePlayer.setAttribute("src", "./images/rock.png");
     } else if (player === "Paper") {
-        imagePlayer.setAttribute("src", "./paper.png");
+        imagePlayer.setAttribute("src", "./images/paper.png");
     } else if (player === "Scissors") {
-        imagePlayer.setAttribute("src", "./scissors.png");
+        imagePlayer.setAttribute("src", "./images/scissors.png");
     }
 }
 
 function setImageRobot(robot, imageRobot) {
     if (robot === "Rock") {
-        imageRobot.setAttribute("src", "./rock.png");
+        imageRobot.setAttribute("src", "./images/rock.png");
     } else if (robot === "Paper") {
-        imageRobot.setAttribute("src", "./paper.png");
+        imageRobot.setAttribute("src", "./images/paper.png");
     } else if (robot === "Scissors") {
-        imageRobot.setAttribute("src", "./scissors.png");
+        imageRobot.setAttribute("src", "./images/scissors.png");
     }
 }
 
@@ -82,12 +92,6 @@ function end(result) {
         }, 3000);
     }
 }
-
-
-// 1 cibler inputElement
-// 2 ecouter event oninput sur inputElement
-// 3 lire valeur inputElement dans le event handler
-// 4 modifier player name dans le html
 
 function start() {
     const startBtn = document.getElementById("startButton");
