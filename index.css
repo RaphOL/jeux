@@ -15,18 +15,60 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  opacity: 0.8;
+}
+
+@keyframes bounce-top {
+  0% {
+    transform: translateY(-45px);
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(-24px);
+    animation-timing-function: ease-in;
+  }
+  65% {
+    transform: translateY(-12px);
+    animation-timing-function: ease-in;
+  }
+  82% {
+    transform: translateY(-6px);
+    animation-timing-function: ease-in;
+  }
+  93% {
+    transform: translateY(-4px);
+    animation-timing-function: ease-in;
+  }
+  25%,
+  55%,
+  75%,
+  87% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateY(0);
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
 }
 
 #startButton {
   width: 150px;
   height: 50px;
   border: none;
-  font-size: 20px;
-  border-radius: 25px;
+  font-size: 25px;
+  border-radius: 30px;
   background-color: #f56cc0;
   margin: 20px;
   outline: none;
   cursor: pointer;
+  animation: bounce-top 2s both;
+  animation: bounce-top 2s both;
 }
 
 #logo {
