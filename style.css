@@ -73,9 +73,17 @@
   animation: bounce-top 2s both;
 }
 
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+
 input {
   color: black;
   margin-bottom: 20px;
+  border-radius: 5px;
 }
 
 #logo {
