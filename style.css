@@ -73,6 +73,11 @@
   animation: bounce-top 2s both;
 }
 
+#startButton:hover {
+  background-color: #00D1AE;
+  transition: background-color 1s;
+}
+
 label {
   display: flex;
   flex-direction: column;
@@ -156,6 +161,11 @@ p {
   cursor: pointer;
 }
 
+#rock:hover {
+  background-color: #00D1AE;
+  transition: background-color 1s;
+}
+
 #paper {
   width: 150px;
   height: 50px;
@@ -168,6 +178,11 @@ p {
   cursor: pointer;
 }
 
+#paper:hover {
+  background-color: #00D1AE;
+  transition: background-color 1s;
+}
+
 #scissors {
   width: 150px;
   height: 50px;
@@ -178,6 +193,11 @@ p {
   margin: 20px;
   outline: none;
   cursor: pointer;
+}
+
+#scissors:hover {
+  background-color: #00D1AE;
+  transition: background-color 1s;
 }
 
 .hands {
